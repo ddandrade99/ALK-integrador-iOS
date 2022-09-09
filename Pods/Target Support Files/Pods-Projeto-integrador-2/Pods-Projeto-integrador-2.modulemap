@@ -1,0 +1,6 @@
+framework module Pods_Projeto_integrador_2 {
+  umbrella header "Pods-Projeto-integrador-2-umbrella.h"
+
+  export *
+  module * { export * }
+}
