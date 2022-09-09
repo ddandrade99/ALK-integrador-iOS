@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol BoredManagerDelegate {
     func updateModel(_ boredManager: BoredManager, bored: BoredModel)
     func didFailWithError(error: Error)
@@ -44,24 +43,6 @@ struct BoredManager {
             task.resume()
         }
     }
-
-//    func performRequest(with urlString: String) {
-//        if let url = URL(string: urlString) {
-//            let session = URLSession(configuration: .default)
-//            let task = session.dataTask(with: url) { (data, response, error) in
-//                if error != nil {
-//                    self.delegate?.didFailWithError(error: error!)
-//                    return
-//                }
-//                if let safeData = data {
-//                    if let model = self.parseJSON(safeData) {
-//                        self.delegate?.updateModel(self, bored: model)
-//                    }
-//                }
-//            }
-//            task.resume()
-//        }
-//    }
 
     func parseJSON(_ boredData: Data) -> BoredModel? {
         let decoder = JSONDecoder()

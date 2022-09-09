@@ -23,7 +23,7 @@
 		578C262E28C794FD00D78710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 578C262C28C794FD00D78710 /* LaunchScreen.storyboard */; };
 		578C263728C795CC00D78710 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578C263528C795CC00D78710 /* InitialViewController.swift */; };
 		578C263828C795CC00D78710 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 578C263628C795CC00D78710 /* InitialViewController.xib */; };
-		EBD4BFAF28CA3C0C00DD1EFC /* RandomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4BFAE28CA3C0C00DD1EFC /* RandomManager.swift */; };
+		EBD4BFAF28CA3C0C00DD1EFC /* BoredAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4BFAE28CA3C0C00DD1EFC /* BoredAPIManager.swift */; };
 		EBD4BFB128CA3E1200DD1EFC /* BoredModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4BFB028CA3E1200DD1EFC /* BoredModel.swift */; };
 		F3C2B78CE57DFB1834D6B38D /* Pods_Projeto_integrador_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A865A44183051B3D311BC21 /* Pods_Projeto_integrador_2.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		578C263528C795CC00D78710 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		578C263628C795CC00D78710 /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		7CF770D396F346124AA37C49 /* Pods-Projeto-integrador-2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projeto-integrador-2.release.xcconfig"; path = "Target Support Files/Pods-Projeto-integrador-2/Pods-Projeto-integrador-2.release.xcconfig"; sourceTree = "<group>"; };
-		EBD4BFAE28CA3C0C00DD1EFC /* RandomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomManager.swift; sourceTree = "<group>"; };
+		EBD4BFAE28CA3C0C00DD1EFC /* BoredAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredAPIManager.swift; sourceTree = "<group>"; };
 		EBD4BFB028CA3E1200DD1EFC /* BoredModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				EBD4BFAD28CA3BC800DD1EFC /* API */,
-				EBD4BFA428CA17FA00DD1EFC /* Activities */,
-				EBD4BFA328CA179400DD1EFC /* Categories */,
 				EBD4BFA228CA174B00DD1EFC /* Initial */,
+				EBD4BFA328CA179400DD1EFC /* Categories */,
+				EBD4BFA428CA17FA00DD1EFC /* Activities */,
 				578C262F28C794FD00D78710 /* Info.plist */,
 				EBD4BFA528CA182A00DD1EFC /* Resources */,
 			);
@@ -217,7 +217,7 @@
 		EBD4BFAD28CA3BC800DD1EFC /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EBD4BFAE28CA3C0C00DD1EFC /* RandomManager.swift */,
+				EBD4BFAE28CA3C0C00DD1EFC /* BoredAPIManager.swift */,
 				EBD4BFB028CA3E1200DD1EFC /* BoredModel.swift */,
 			);
 			path = API;
@@ -347,7 +347,7 @@
 				578030B828C92B2800AE6700 /* Categories.swift in Sources */,
 				578030BB28C92CC300AE6700 /* CategoriesTableViewCell.swift in Sources */,
 				578C262228C794FC00D78710 /* AppDelegate.swift in Sources */,
-				EBD4BFAF28CA3C0C00DD1EFC /* RandomManager.swift in Sources */,
+				EBD4BFAF28CA3C0C00DD1EFC /* BoredAPIManager.swift in Sources */,
 				57613F3528C8E50F006E7B21 /* CategoriesViewController.swift in Sources */,
 				578030B528C924D200AE6700 /* ActivitiesViewController.swift in Sources */,
 				578C262428C794FC00D78710 /* SceneDelegate.swift in Sources */,

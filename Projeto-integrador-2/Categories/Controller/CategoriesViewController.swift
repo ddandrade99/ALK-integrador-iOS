@@ -7,14 +7,12 @@
 
 import UIKit
 
-
 class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var categoriesList: UITableView!
     
     var newCategories = [String]()
     var activity = BoredModel("", "", 0, 0.0)
-    
     var apiManager = BoredManager()
     
     override func viewDidLoad() {
@@ -27,7 +25,6 @@ class CategoriesViewController: UIViewController {
         categoriesList.dataSource = self
         categoriesList.delegate = self
         categoriesList.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
     }
     
     init(_ participants: Int){
@@ -69,8 +66,10 @@ extension CategoriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CategoriesTableViewCell else {
             return UITableViewCell()
-            
         }
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = .systemMint
+        cell.selectedBackgroundView = bgColorView
         cell.selectCell(activities: newCategories[indexPath.row])
         return cell
     }
@@ -80,9 +79,9 @@ extension CategoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         apiManager.fetchBored(self.activity.participants, newCategories[indexPath.row])
         self.navigationController?.pushViewController(ActivitiesViewController(self.activity, newCategories[indexPath.row]), animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
 
 extension CategoriesViewController: BoredManagerDelegate {
     
@@ -91,9 +90,7 @@ extension CategoriesViewController: BoredManagerDelegate {
             self.activity = bored
         }
     }
-    
     func didFailWithError(error: Error) {
         print(error)
     }
-    
 }

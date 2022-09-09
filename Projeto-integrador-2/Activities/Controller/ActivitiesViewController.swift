@@ -8,8 +8,6 @@
 import UIKit
 
 class ActivitiesViewController: UIViewController {
-
-    var activity: BoredModel
     
     @IBOutlet weak var activityName: UILabel!
     
@@ -20,6 +18,7 @@ class ActivitiesViewController: UIViewController {
     @IBOutlet weak var typeLabel: UILabel!
     
     var apiManager = BoredManager()
+    var activity: BoredModel
     
     init(_ activity: BoredModel, _ category: String = "Random"){
         self.activity = activity
@@ -54,7 +53,6 @@ class ActivitiesViewController: UIViewController {
         }
     }
     
-    
     @IBAction func tryAnotherButton(_ sender: UIButton) {
         apiManager.fetchBored(self.activity.participants, self.activity.type)
     }
@@ -75,5 +73,4 @@ extension ActivitiesViewController: BoredManagerDelegate {
     func didFailWithError(error: Error) {
         print(error)
     }
-    
 }

@@ -20,5 +20,4 @@ struct BoredModel: Codable {
         self.participants = participants
         self.price = price
     }
-    
 }

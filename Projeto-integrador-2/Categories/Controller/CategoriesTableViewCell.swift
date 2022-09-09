@@ -11,7 +11,6 @@ class CategoriesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var categoriesLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,13 +18,10 @@ class CategoriesTableViewCell: UITableViewCell {
     
     func selectCell(activities:String){
         categoriesLabel.text = activities
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
-    
 }
